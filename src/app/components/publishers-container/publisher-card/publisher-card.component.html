@@ -1,0 +1,35 @@
+<div>
+  <h1>{{ publisher.publisher }} ({{ publisher.domains.length }})</h1>
+  <hr />
+  <div class="publisher-card-container">
+    <h3>{{ publisher.publisher }}</h3>
+    <form (ngSubmit)="addDomain()">
+      <label>
+        URL
+        <input [(ngModel)]="newDomain.url" name="url" required />
+      </label>
+      <label>
+        Desktop Ads
+        <input
+          type="number"
+          [(ngModel)]="newDomain.desktopAds"
+          name="desktopAds"
+        />
+      </label>
+      <label>
+        Mobile Ads
+        <input
+          type="number"
+          [(ngModel)]="newDomain.mobileAds"
+          name="mobileAds"
+        />
+      </label>
+      <button type="submit">Add New Domain</button>
+    </form>
+
+    <app-domain-card
+      *ngFor="let domain of publisher.domains"
+      [domain]="domain"
+    ></app-domain-card>
+  </div>
+</div>

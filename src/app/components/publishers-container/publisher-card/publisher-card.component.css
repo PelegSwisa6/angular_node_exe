@@ -1,0 +1,35 @@
+.publisher-card-container form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  padding: 15px;
+}
+
+.publisher-card-container label {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+}
+
+.publisher-card-container input[type="number"] {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.publisher-card-container button {
+  align-self: flex-start;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  background-color: #007bff;
+  color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.publisher-card-container button:hover {
+  background-color: #0056b3;
+}

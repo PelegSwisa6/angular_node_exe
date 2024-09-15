@@ -1,5 +1,13 @@
 [
   {
+    "publisher": "publisher 7",
+    "domains": []
+  },
+  {
+    "publisher": "publisher 6",
+    "domains": []
+  },
+  {
     "publisher": "publisher 5",
     "domains": [
       {

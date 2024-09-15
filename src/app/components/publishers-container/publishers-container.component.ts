@@ -33,9 +33,14 @@ export class PublishersContainerComponent implements OnInit {
     }
 
     addPublisher(): void {
-        this.httpService.addPublisher(this.newPublisher).subscribe(() => {
+        this.httpService.addPublisher(this.newPublisher).subscribe({
+          next: () => {
             this.loadPublishers();
-        })
-
-    }
+            this.newPublisher = { publisher: '', domains: [] }; 
+          },
+          error: (err) => {
+            alert(err.error.errorMessage); 
+          }
+        });
+      }
 }
